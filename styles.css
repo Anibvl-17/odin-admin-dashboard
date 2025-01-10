@@ -2,6 +2,7 @@
   --primary-color: #1992d4;
   --accent-color: #f0b429;
   --secondary-text: #636363;
+  --gray-bg: #e2e8f0;
 }
 
 html,
@@ -10,6 +11,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  margin: 0;
 }
 
 .container {
@@ -32,8 +37,69 @@ body {
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
   grid-area: header;
   z-index: 2; /* Ensure header is above for shadow display */
+  display: grid;
+  grid-template-areas: 
+    "search-bar account-info"
+    "welcome    actions";
+  grid-template-columns: 2fr 1.5fr;
+  grid-template-rows: 0.4fr auto;
+  row-gap: 1rem;
+  padding-inline: 48px !important;
 }
 
+.search-bar {
+  grid-area: search-bar;
+  display: grid;
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: none;
+  background-color: var(--gray-bg);
+  border-radius: 1rem;
+}
+
+.welcome-container {
+  grid-area: welcome;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.account-info {
+  grid-area: account-info;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  column-gap: 2rem;
+}
+
+.actions-container {
+  grid-area: actions;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  justify-items: end;
+  column-gap: 2rem;
+}
+
+.actions-container button {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 1.2rem;
+  padding-block: 12px;
+  width: 7rem;
+}
 
 /* Sidebar styles */
 .sidebar {
@@ -67,7 +133,7 @@ body {
 
 /* Main styles */
 .main {
-  background-color: #e2e8f0;
+  background-color: var(--gray-bg);
   grid-area: main;
 }
 
@@ -87,4 +153,26 @@ body {
 .icon-medium {
   width: 3rem;
   height: 3rem;
+}
+
+.icon-large {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* Text sizing */
+.text-small {
+  font-size: 0.8rem;
+}
+
+.text-normal {
+  font-size: 1rem;
+}
+
+.text-medium {
+  font-size: 1.2rem;
+}
+
+.text-large {
+  font-size: 1.5rem;  
 }

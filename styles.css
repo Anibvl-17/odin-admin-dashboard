@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #1992d4;
+  --accent-color: #f0b429;
+  --secondary-text: #636363;
+}
+
 html,
 body {
   height: 100%;
@@ -15,13 +21,24 @@ body {
   grid-template-rows: 1fr 5fr;
 }
 
+.container > div {
+  padding: 20px;
+}
+
 .header {
   background-color: white;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
   grid-area: header;
+  z-index: 2; /* Ensure header is above for shadow display */
+}
+
+.header-title {
+  display: flex;
 }
 
 .sidebar {
-  background-color: #1992d4;
+  background-color: var(--primary-color);
+  color: white;
   grid-area: sidebar;
 }
 

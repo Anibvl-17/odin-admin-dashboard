@@ -52,16 +52,17 @@ body {
   gap: 1rem;
 }
 
-ul {
+.sidebar-menu {
   list-style-type: none;
   padding: 0;
 }
 
-ul li {
+.sidebar-menu li {
   display: grid;
   grid-template-columns: 1fr 4fr;
   align-items: center;
   gap: 1rem;
+  font-weight: bold;
 }
 
 /* Main styles */

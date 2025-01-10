@@ -71,6 +71,12 @@ body {
   grid-area: main;
 }
 
+.icon-credits, .icon-credits a {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--secondary-text);
+}
+
 /* Icon sizing */
 .icon-small {
   width: 1.5rem;

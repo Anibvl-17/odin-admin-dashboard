@@ -241,9 +241,11 @@ h2, h3, h4, p, ul, li {
   grid-template-areas: 
     "icon name"
     "icon project";
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 1fr 1fr;
   column-gap: 20px;
+  align-items: center;
+  align-content: center;
 }
 
 .trending-section ul li img {

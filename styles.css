@@ -152,7 +152,7 @@ h2, h3, h4, p, ul, li {
 .icon-credits, .icon-credits a {
   font-size: 0.8rem;
   font-style: italic;
-  color: var(--secondary-text);
+  color: white;
 }
 
 .projects-section {
